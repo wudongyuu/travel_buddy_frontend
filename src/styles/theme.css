@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(40 16% 98%);
+  --color-card: hsl(40 16% 98%);
+  --color-popover: hsl(40 16% 98%);
+  --color-foreground: hsl(37.5 15.6863% 20%);
+  --color-card-foreground: hsl(37.5 15.6863% 20%);
+  --color-popover-foreground: hsl(37.5 15.6863% 20%);
+  --color-muted-foreground: hsl(36 19.8413% 49.4118%);
+  --color-primary: hsl(37.5 15.6863% 20%);
+  --color-primary-foreground: hsl(40 16% 98%);
+  --color-secondary: hsl(55 24% 49.0196%);
+  --color-secondary-foreground: hsl(40 16% 98%);
+  --color-muted: hsl(44 26.3158% 88.8235%);
+  --color-accent: hsl(40 24.0876% 73.1373%);
+  --color-accent-foreground: hsl(30 14% 30%);
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+  --color-border: hsl(43.3333 23.0769% 84.7059%);
+  --color-input: hsl(44 26.3158% 88.8235%);
+  --color-ring: hsl(37.5 15.6863% 20%);
+  --color-chart-1: hsl(55 20% 80%);
+  --color-chart-2: hsl(0 15.3374% 31.9608%);
+  --color-chart-3: hsl(70.5882 10.0592% 66.8627%);
+  --color-chart-4: hsl(55 24% 49.0196%);
+  --color-chart-5: hsl(28.9888 91.7526% 61.9608%);
+  --color-sidebar: hsl(40 16% 98%);
+  --color-sidebar-foreground: hsl(37.5 15.6863% 20%);
+  --color-sidebar-primary: hsl(37.5 15.6863% 20%);
+  --color-sidebar-primary-foreground: hsl(40 16% 98%);
+  --color-sidebar-accent: hsl(40 24.0876% 73.1373%);
+  --color-sidebar-accent-foreground: hsl(37.5 15.6863% 20%);
+  --color-sidebar-border: hsl(43.3333 23.0769% 84.7059%);
+  --color-sidebar-ring: hsl(37.5 15.6863% 20%);
+  
+  --font-sans: 'Fraunces', ui-serif, Georgia, serif;
+  --font-serif: 'Fraunces', ui-serif, Georgia, serif;
+  --font-mono: monospace;
+  
+  --radius: 2rem;
+  
+  --shadow-2xs: 0px 2px 4px 0px hsl(35 15% 50% / 0);
+  --shadow-xs: 0px 2px 4px 0px hsl(35 15% 50% / 0);
+  --shadow-sm: 0px 2px 4px 0px hsl(35 15% 50% / 0), 0px 1px 2px -1px hsl(35 15% 50% / 0);
+  --shadow: 0px 2px 4px 0px hsl(35 15% 50% / 0), 0px 1px 2px -1px hsl(35 15% 50% / 0);
+  --shadow-md: 0px 2px 4px 0px hsl(35 15% 50% / 0), 0px 2px 4px -1px hsl(35 15% 50% / 0);
+  --shadow-lg: 0px 2px 4px 0px hsl(35 15% 50% / 0), 0px 4px 6px -1px hsl(35 15% 50% / 0);
+  --shadow-xl: 0px 2px 4px 0px hsl(35 15% 50% / 0), 0px 8px 10px -1px hsl(35 15% 50% / 0);
+  --shadow-2xl: 0px 2px 4px 0px hsl(35 15% 50% / 0);
+  
+  --tracking-normal: 0.01em;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    letter-spacing: var(--tracking-normal);
+    min-height: 100vh;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
